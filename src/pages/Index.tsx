@@ -1,14 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import CentralizedContainer from '../components/layout/CentralizedContainer';
+import LoginForm from '../components/Login/LoginForm';
 
-const Index = () => {
+/**
+ * IndexPage serves as the main login page for the application.
+ * It utilizes the CentralizedContainer to ensure the content (LoginForm)
+ * is centered on the screen, providing a clean and focused user experience.
+ */
+const IndexPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <CentralizedContainer>
+      <LoginForm />
+    </CentralizedContainer>
   );
 };
 
-export default Index;
+export default IndexPage;
